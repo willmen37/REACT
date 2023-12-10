@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navStock{
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+  border-radius: 5px;
+  border: 2px solid rgb(189, 47, 32);
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+}
+
+.navitem{
+  color: rgb(189, 47, 32);;
+}
+
