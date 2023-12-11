@@ -30,7 +30,11 @@ const AllShips = () => {
         console.log(item)
         return(
             <div key={index} className="ships">
-             {item.name} 
+             {item.name}
+             <br/>
+             Capacity: {item.passengers} crew.
+             <br/>
+             Model:{item.model}
             </div>
         )
        
