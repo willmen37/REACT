@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@font-face{
+  font-family: hongKongFont;
+  src: url(https://www.dafont.com/kongtext.font);
+}
+
+.nes-text{
+  font-family: hongKongFont;
+}
+
