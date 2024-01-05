@@ -72,6 +72,7 @@ function App() {
           <Places
               places={places}
               childClicked={childClicked}
+              isLoading={isLoading}
           />
         </div>
 
