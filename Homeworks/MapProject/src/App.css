@@ -40,17 +40,17 @@
 
 .placeCard{
    /* Add shadows to create the "card" effect */
-  
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   display: flex;
-   background-color: #E5E7EB;
-   max-width: 400px;
-   height: 400px; 
-   margin: auto;
-   text-align: center;
-   font-family: arial;
-   border-radius: 5px;
-   margin-bottom: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  font-size: 14px;
+  width: 400px;
+  background-color: #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 1rem;
    
  }
  
