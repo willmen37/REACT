@@ -16,13 +16,13 @@ const Header = ({setCoordinates}) => {
   return (
     
     <nav className='nav'>
-      <b>WorldFoodies</b>
+      <h1>WorldFoodies</h1>
       <>
         {/*<> <a href="#services">Services</a></>
            <> <a href="#portfolio">Portfolio</a></>
            <> <a href="#contact">Contact</a></>*/}
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <input type="text" placeholder="Search.."></input>
+          <input type="text" className="input" placeholder="Type your Location here"></input>
         </Autocomplete>
         
       </>

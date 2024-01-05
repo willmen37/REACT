@@ -2,8 +2,8 @@ import { useEffect, useState, createRef } from 'react';
 import PlaceDetails from './PlaceDetails';
 
 
-const Places = ({places, childClicked, isLoading}) => {
-  const [type, setType] = useState("restaurants")
+const Places = ({places, childClicked, isLoading, type, setType}) => {
+
   
   //  console.log({childClicked})
 
@@ -41,7 +41,16 @@ const Places = ({places, childClicked, isLoading}) => {
         <div> <h5>Loading...</h5> </div>
       ):(
         <>
-       
+          <form>
+            <label>
+              <h3>WHERE TO?</h3>
+
+              <select value={type} onChange={(e)=> setType(e.target.value)}>
+                <option value={"restaurant"}>Restaurant</option>
+                <option value={"attractions"}>Attractions</option>
+              </select>
+            </label>
+          </form>
           <div>
             {places && places.map((item,index)=>{
               // console.log(item)

@@ -14,6 +14,7 @@ function App() {
   const [bounds, setBounds] = useState({})
 
   const [isLoading, setIsLoading] = useState(false)
+  const [type, setType] = useState("restaurants")
 
   // useEffect(()=>{
 
@@ -23,24 +24,24 @@ function App() {
   //   })
   // },[])
 
-  
+  // console.log(import.meta.env.VITE_TRAVEL_API_KEY)
   useEffect(()=>{
     // console.log(coordinates,bounds)
     setIsLoading(true)
 
     if(bounds.ne && bounds.sw){
-      fetchData(bounds.ne,bounds.sw)
+      fetchData(type,bounds.ne,bounds.sw)
       .then((data) => { 
-          //  console.log(data)  
+          console.log(data)  
           setPlaces(data.filter((place)=> place.name && place.num_reviews > 0));
           setIsLoading(false)
-        })  
+        }).catch((err)=>console.log(err))  
 
     }
     
 
 
-  },[bounds]);
+  },[type,bounds]);
 
   // console.log(places)
 
@@ -62,7 +63,6 @@ function App() {
             coordinates={coordinates}
             places={places}
             setChildClicked = {setChildClicked}
-        
           />
           
         </div> 
@@ -73,6 +73,9 @@ function App() {
               places={places}
               childClicked={childClicked}
               isLoading={isLoading}
+
+              type={type}
+              setType={setType}
           />
         </div>
 
