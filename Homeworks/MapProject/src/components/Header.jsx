@@ -16,7 +16,7 @@ const Header = ({setCoordinates}) => {
   return (
     
     <nav className='nav'>
-      <b>GoingOut</b>
+      <b>WorldFoodies</b>
       <>
         {/*<> <a href="#services">Services</a></>
            <> <a href="#portfolio">Portfolio</a></>

@@ -18,7 +18,7 @@ const PlaceDetails = ({item, selected, refProp}) => {
           <img src={img.large ? img.large.url : img.small.url} className="img-place" alt='Card Place'/> 
           
           <div className='itemsCard'>
-            {item?.address && (<> <b>Location:</b> {item.address}</>)}
+            {item?.website && (<> <b>Website:</b> <a href={item.website}>{item.website}</a></>)}
             <br/>
             <div><b>Ranking:</b> {item.ranking} </div>
             {item?.phone && (<><b>Phone:</b> {item.phone}</>)}
