@@ -1,23 +1,31 @@
 .container{
   display: flex;
   /* width: 50%; */
- 
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* background-color: black; */
+  
 }
 
 .internalDiv1{
   flex: 1;
-  /* border: 2px solid rgb(226, 125, 43); */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* border: rgb(226, 125, 43); */ 
   margin: 10px;
-  background-color: #E5E7EB;
+  /* background-color: #E5E7EB; */
+  /* width: 110px; */
+  height: 1200px;
+  overflow: auto;
+  border-radius: 5px;
 }
 
 .internalDiv2{
-  flex: 1;
-  border: 2px solid blueviolet; 
+  flex: 2;
+  /* border: 2px solid rgb(226, 125, 43); */
   margin: 10px;
   background-color: #E5E7EB;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .nav{
@@ -32,14 +40,18 @@
 
 .placeCard{
    /* Add shadows to create the "card" effect */
+  
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   
+   display: flex;
+   background-color: #E5E7EB;
    max-width: 400px;
    height: 400px; 
    margin: auto;
    text-align: center;
    font-family: arial;
    border-radius: 5px;
+   margin-bottom: 1rem;
+   
  }
  
  /* On mouse-over, add a deeper shadow */
@@ -50,17 +62,33 @@
 
 .img-place{
   border-radius: 5px;
-  width: 50%;
+  width: 350px;
+  height: 200px;
 
+}
+
+.itemsCard{
+  
+  height: 100px;
+  
 }
 /*///////////////MAPCARD////////////////////////////////////////////////////////*/
 .map-card{
-  border: 1px solid black;
-  font-size: 12px;
-  max-width: 40px;
+ 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  font-size: 9px;
+  width: 70px;
+  background-color: #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
 
 }
 
 .img-map{
-  width: 20px;
+  width: 50px;
+  border-radius: 5px;
 }

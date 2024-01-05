@@ -56,22 +56,24 @@ function App() {
         
 
         <div className='internalDiv2'>
-          <Places
+          <MapC
+            setCoordinates={setCoordinates}
+            setBounds={setBounds}
+            coordinates={coordinates}
             places={places}
-            childClicked={childClicked}
+            setChildClicked = {setChildClicked}
+        
           />
+          
         </div> 
         
         <div className='internalDiv1'> 
-        <MapC
-          setCoordinates={setCoordinates}
-          setBounds={setBounds}
-          coordinates={coordinates}
-          places={places}
-          setChildClicked = {setChildClicked}
         
-        />
-</div>
+          <Places
+              places={places}
+              childClicked={childClicked}
+          />
+        </div>
 
         
       </div>

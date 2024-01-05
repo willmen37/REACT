@@ -19,7 +19,7 @@ let obj = {
         const data = await axios.get(URL, {
           params: obj,
           headers: {
-            'X-RapidAPI-Key': '35bc708560msh6eaa3092aea4bcfp143079jsn68cfbb6cbe37',
+            'X-RapidAPI-Key': "35bc708560msh6eaa3092aea4bcfp143079jsn68cfbb6cbe37",
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
           }
         });

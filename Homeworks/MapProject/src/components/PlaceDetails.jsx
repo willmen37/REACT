@@ -12,19 +12,21 @@ const PlaceDetails = ({item, selected, refProp}) => {
       {img ? (
         <div className='containerPlaceCard'  style = {{height: 350}}>
           <br/>
-          <img src={img.small ? img.small.url : img.small.url} className="img-place" alt='Card Place'/> 
+          <img src={img.large ? img.large.url : img.small.url} className="img-place" alt='Card Place'/> 
           <div>
-            <h3>{item.name}</h3>
-            {item?.address && (<> Location: {item.address}</>)}
+            <h2>{item.name}</h2> 
           </div>
-          <div>
-            <>Price:{item.price_level}</> 
-            <>Ranking: {item.ranking} </>
-            {item?.phone && (<>Phone: {item.phone}</>)}
+          <div className='itemsCard'>
+            {item?.address && (<> <b>Location:</b> {item.address}</>)}
+            <br/>
+            <div><b>Ranking:</b> {item.ranking} </div>
+            {item?.phone && (<><b>Phone:</b> {item.phone}</>)}
+            <br/>
+            <div><b>Price:</b>{item.price_level}</div> 
           </div>  
         </div>
         
-      ): null}
+      ): (null)}
     </div>
   )
 }
