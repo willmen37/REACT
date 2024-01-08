@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Autocomplete } from '@react-google-maps/api';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRoute, faLocationDot, faGopuram, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = ({setCoordinates, type, setType}) => {
@@ -16,19 +18,22 @@ const Header = ({setCoordinates, type, setType}) => {
   return (
     
     <nav className='nav'>
-      <h1 className='title'>GoingOut</h1>
+      <div className='title'>
+        <FontAwesomeIcon icon={faRoute} size="xl" />
+        < >GoingOut</>
+      </div>
       <>
         <div className='where'>
-          <h3 className='placesh3'>City:</h3>
+          <FontAwesomeIcon icon={faLocationDot} size="xl" className='placesh3'/>
           <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
             
             <input type="text" className="input" placeholder=" Type your Location here"></input>
           </Autocomplete>
         </div>
         <div className='where'>
-          <h3 className='placesh3'>Places:</h3>
+          
+          <FontAwesomeIcon icon={ faUtensils} size="xl" className='placesh3'/>
           <form>
-            
             <label >
               <select value={type} onChange={(e)=> setType(e.target.value)} className='custom'>
                 <option value={"restaurants"}>Restaurants</option>
@@ -36,6 +41,8 @@ const Header = ({setCoordinates, type, setType}) => {
               </select>
             </label>
           </form>
+          <FontAwesomeIcon icon={faGopuram} size="xl" className='placesh3'/>
+
         </div>  
     
         

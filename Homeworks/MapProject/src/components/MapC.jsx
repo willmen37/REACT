@@ -6,7 +6,7 @@ import MapStl from "./mapStl"
 const MapC = ({setCoordinates, setBounds, coordinates, places, setChildClicked}) => {
 
   return (
-    <div style={{height: "150vh", width: "100%"}}>
+    <div style={{height: "90vh", width: "100%"}}>
       <GoogleMapReact
         bootstrapURLKeys = {{key:import.meta.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
         defaultCenter = {coordinates}

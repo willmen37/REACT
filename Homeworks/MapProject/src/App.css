@@ -25,7 +25,7 @@
   margin: 10px;
   /* background-color: aquamarine; */
   /* width: 110px; */
-  height: 1200px;
+  height: 90vh;
   overflow: auto;
   border-radius: 5px;
   /* border: 1px solid  #4285F4; */
@@ -76,12 +76,18 @@
 
 .where{
   display: flex;
-  justify-content: space-evenly;
-  /* gap: 800px; */
+  /* justify-content: space-between; */
+  gap: 10px;
   align-items: center;
 }
 .title{
   color:  #f72585;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  align-items: center;
+  font-size: 30px;
+  
 }
 
 .placesh3{
@@ -136,10 +142,12 @@
   cursor: pointer;
   text-align: center;
   border-radius: 5px;
+  border: 1px solid  #4285F4;
 
 }
 
 .img-map{
   width: 50px;
   border-radius: 5px;
+  border: 1px solid  #4285F4;
 }
