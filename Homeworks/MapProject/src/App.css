@@ -111,7 +111,23 @@
   border: 1px solid  #4285F4;
    
  }
+.itemsCard{
+  color:  #f72585;
 
+}
+
+.testClass{
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
+  width: 100%;
+  font-size: 19px;
+}
+
+.cardName{
+  font-size: 31px;
+  
+}
  
 
 .img-place{
@@ -119,6 +135,7 @@
   width: 300px;
   height: 200px;
   border: 1px solid  #4285F4;
+
 
 }
 

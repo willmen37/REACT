@@ -37,7 +37,7 @@ const MapC = ({setCoordinates, setBounds, coordinates, places, setChildClicked})
               <div>
                 <h3>{item.name}</h3>
                 <img src={img} className="img-map" alt={item.name}/>
-                <div><b>Price:</b>{item.price_level}</div>
+                <div><b>Price: </b>{item.price_level}</div>
               </div>
             ):(null)}
           </div>

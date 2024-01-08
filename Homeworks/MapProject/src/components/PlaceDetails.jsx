@@ -1,4 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneVolume, faRankingStar, faHandHoldingDollar, faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const PlaceDetails = ({item, selected, refProp}) => {
@@ -10,22 +13,23 @@ const PlaceDetails = ({item, selected, refProp}) => {
   return (
     <div className="placeCard">
       {img ? (
-        <div className='containerPlaceCard'  style = {{height: 350}}>
-          <div>
-            <h3>{item.name}</h3> 
+        <div className='containerPlaceCard'  >
+          <div className='cardName testClass'>
+            <>{item.name}</> 
           </div>
           
           <img src={img.large ? img.large.url : img.small.url} className="img-place" alt='Card Place'/> 
           
-          <div className='itemsCard'>
-            {item?.website && (<> <b>Website:</b> <a href={item.website}>{item.website}</a></>)}
+          <div className='testClass'>
+            {item?.website && (<><FontAwesomeIcon icon={faGlobe} className='itemsCard' /> <b> :</b> <a href={item.website}>Click to access Website.</a></>)}
             <br/>
-            <b>Ranking:</b> {item.ranking} 
+            <FontAwesomeIcon icon={faRankingStar} className='itemsCard'  /><b> :</b> {item.ranking} 
             <br/>
-            {item?.phone && (<><b>Phone:</b> {item.phone}</>)}
+            {item?.phone && (<> <FontAwesomeIcon icon={faPhoneVolume} className='itemsCard' /> <b> :</b> {item.phone}</>)}
             <br/>
-            <b>Price:</b>{item.price_level}
-          </div>  
+            {item?.price_level && (<><FontAwesomeIcon icon={faHandHoldingDollar} className='itemsCard' /><b>  : </b><>{item.price_level}</></>)}
+          </div> 
+           
         </div>
         
       ): (null)}
