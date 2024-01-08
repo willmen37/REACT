@@ -2,7 +2,7 @@ import { useEffect, useState, createRef } from 'react';
 import PlaceDetails from './PlaceDetails';
 
 
-const Places = ({places, childClicked, isLoading, type, setType}) => {
+const Places = ({places, childClicked, isLoading}) => {
 
   
   //  console.log({childClicked})
@@ -16,41 +16,25 @@ const Places = ({places, childClicked, isLoading, type, setType}) => {
   },[places]);
 
   /*
-  
-          <form>
+         <form>
             <label>
               <h3>WHERE TO?</h3>
 
               <select value={type} onChange={(e)=> setType(e.target.value)}>
-                <option value={"restaurant"}>Restaurant</option>
-                <option value={"atractions"}>Atractions</option>
-              </select>
-
-              <select>
-                <option value="ratings">Ratings</option>
+                <option value={"restaurant"}>Restaurants</option>
+                <option value={"attractions"}>Attractions</option>
               </select>
             </label>
           </form>
   */
 
-    
-
   return (
     <div>
       {isLoading ? (
-        <div> <h5>Loading...</h5> </div>
+        <div className='loading'> <h1>Loading...</h1> </div>
       ):(
         <>
-          <form>
-            <label>
-              <h3>WHERE TO?</h3>
-
-              <select value={type} onChange={(e)=> setType(e.target.value)}>
-                <option value={"restaurant"}>Restaurant</option>
-                <option value={"attractions"}>Attractions</option>
-              </select>
-            </label>
-          </form>
+     
           <div>
             {places && places.map((item,index)=>{
               // console.log(item)
