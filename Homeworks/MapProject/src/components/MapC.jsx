@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
 import MapStl from "./mapStl"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 const MapC = ({setCoordinates, setBounds, coordinates, places, setChildClicked}) => {
@@ -36,8 +38,9 @@ const MapC = ({setCoordinates, setBounds, coordinates, places, setChildClicked})
             { img?(
               <div>
                 <h3>{item.name}</h3>
+                <div><FontAwesomeIcon icon={faStar}  className='rating' />: {item.rating}</div>
                 <img src={img} className="img-map" alt={item.name}/>
-                <div><b>Price: </b>{item.price_level}</div>
+                {item?.price_level && (<><b>Price: </b><>{item.price_level}</></>)}
               </div>
             ):(null)}
           </div>

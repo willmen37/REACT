@@ -16,13 +16,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [type, setType] = useState("restaurants")
 
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    navigator.geolocation.getCurrentPosition(({coords:{latitude, longitude}})=>{
-      setCoordinates({lat:latitude, lng:longitude});
+  //   navigator.geolocation.getCurrentPosition(({coords:{latitude, longitude}})=>{
+  //     setCoordinates({lat:latitude, lng:longitude});
 
-    })
-  },[])
+  //   })
+  // },[])
 
 
   useEffect(()=>{

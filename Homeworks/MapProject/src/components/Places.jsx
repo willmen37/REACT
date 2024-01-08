@@ -1,6 +1,7 @@
 import { useEffect, useState, createRef } from 'react';
 import PlaceDetails from './PlaceDetails';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 const Places = ({places, childClicked, isLoading}) => {
 
@@ -31,8 +32,8 @@ const Places = ({places, childClicked, isLoading}) => {
   return (
     <div>
       {isLoading ? (
-        <div className='loading'> <h1>Loading...</h1> </div>
-      ):(
+        <div className='loading'>  <FontAwesomeIcon icon={faEye} beatFade  size="xl" /> <br/> <>Loading...</></div>
+        ):(
         <>
      
           <div>
